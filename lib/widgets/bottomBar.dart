@@ -80,7 +80,8 @@ class _BottomBarState extends State<BottomBar> {
         onTap: (index) {
           setState(() {
             currentIndex = index;
-          });
+          }
+          );
         },
       ),
       body: WidgetOption.elementAt(currentIndex),

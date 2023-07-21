@@ -1,5 +1,4 @@
 import 'dart:ffi';
-
 import 'package:affinity_game/functions/favHandleTap.dart';
 import 'package:affinity_game/home.dart';
 import 'package:affinity_game/widgets/card.dart';
@@ -16,7 +15,7 @@ class UserDetails extends StatefulWidget {
 }
 
 class _UserDetailsState extends State<UserDetails> {
-   bool favStat = false ;
+  //var favStat = widget.user.isFav ;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +38,6 @@ class _UserDetailsState extends State<UserDetails> {
                 onPressed: () {
                   setState(() {
                     widget.user.isFav= handleFavTap(widget.user);
-                    favStat = widget.user.isFav;
                   });
                 },
                 icon: Icon(Icons.favorite,
@@ -181,6 +179,6 @@ class _UserDetailsState extends State<UserDetails> {
     ));
   }
   void _sendDataBack(BuildContext context) {
-    Navigator.pop(context, favStat);
+    Navigator.pop(context, widget.user.isFav);
   }
 }
