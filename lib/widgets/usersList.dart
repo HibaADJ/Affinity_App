@@ -5,8 +5,8 @@ import 'package:affinity_game/data/user.data.dart';
 import '../data/user.data.dart';
 import 'card.dart';
 import 'favoriteCard.dart';
-class UsersList2 extends StatelessWidget {
-  const UsersList2({super.key});
+class UsersList extends StatelessWidget {
+  const UsersList({super.key});
 
   @override
   Widget build(BuildContext context) {

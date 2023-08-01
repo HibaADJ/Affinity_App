@@ -1,6 +1,7 @@
 
 import '../data/user.data.dart';
   List<User> usersFav = [];
+  List<User> listUsers = [];
   bool handleFavTap(User user){
     if(user.isFav){
       user.isFav=false;
@@ -13,7 +14,8 @@ import '../data/user.data.dart';
      if(!usersFav.contains(user)){
        usersFav.add(user);
      }
-    };
+    }
+    print(usersFav.length);
     return user.isFav;
   }
 

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class UserCard extends StatefulWidget {
   final User user ;
   const UserCard({super.key,
-  required this.user,
+    required this.user,
   });
   @override
   State<UserCard> createState() => _UserCardState();
@@ -16,13 +16,13 @@ class _UserCardState extends State<UserCard> {
   Widget build(BuildContext context) {
 
     return  Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.only(top: 7, left: 20,bottom: 7,right: 20),
       child: Container(
         decoration: BoxDecoration(
           color: Colors.grey[300],
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(10),
         ),
-        height: 100,
+        height: 120,
         child: Row(
           children: [
             Expanded(
@@ -33,14 +33,14 @@ class _UserCardState extends State<UserCard> {
                   IconButton(
                     onPressed: () {
                       //Navigator.push( context,
-                        //MaterialPageRoute(builder: (context) =>  UserDetails(user: widget.user)),
+                      //MaterialPageRoute(builder: (context) =>  UserDetails(user: widget.user)),
                       _awaitReturnValueFromSecondScreen(context);
                       //);
                     },
                     iconSize: 84,
                     splashRadius: 20,
                     icon: Image.network(widget.user.picUrl,
-                    //scale: 20,
+                      //scale: 20,
                     ),
                   ),
                 ],
@@ -56,10 +56,10 @@ class _UserCardState extends State<UserCard> {
                     child: Row(
                       children: [
                         Text(widget.user.firstName,
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                        ),
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ],
                     ),
@@ -76,7 +76,7 @@ class _UserCardState extends State<UserCard> {
                       ],
                     ),
                   ),
-                   Padding(
+                  Padding(
                     padding: EdgeInsets.only(left: 20),
                     child: Row(
                       children: [
@@ -106,12 +106,12 @@ class _UserCardState extends State<UserCard> {
                       child:IconButton(
                         splashRadius: 10,
                         onPressed: ()  {
-                           setState(() {
+                          setState(() {
                             widget.user.isFav = handleFavTap(widget.user);
                           });
                         },
                         icon:  Icon(Icons.favorite,
-                        color: (widget.user.isFav) ? Colors.red : Colors.white,
+                          color: (widget.user.isFav) ? Colors.red : Colors.white,
                         ),
                       ),
                     ),
@@ -139,4 +139,3 @@ class _UserCardState extends State<UserCard> {
     });
   }
 }
-

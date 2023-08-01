@@ -21,7 +21,7 @@ class _UserDetailsState extends State<UserDetails> {
     return Scaffold(
         body: SafeArea(
         child: ListView(
-          padding: EdgeInsets.all(15),
+          padding: EdgeInsets.all(20),
         children: <Widget>[
           
           Row(
@@ -41,7 +41,7 @@ class _UserDetailsState extends State<UserDetails> {
                   });
                 },
                 icon: Icon(Icons.favorite,
-                  color: (widget.user.isFav) ? Colors.red : Colors.grey,
+                  color: (widget.user.isFav!) ? Colors.red : Colors.grey,
                 ),
               ),
 
